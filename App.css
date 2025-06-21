@@ -1,0 +1,22 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+header, section, footer {
+  margin-bottom: 2rem;
+}
+h1 {
+  color: #2a4d69;
+}
+h2 {
+  color: #4b86b4;
+}
+img {
+  margin: 0 1rem 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
