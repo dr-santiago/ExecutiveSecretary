@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "Who can I contact for support?",
-    answer: "Please email support@example.com for assistance."
+    answer: "Please email branimir.rivero@missionary.org for assistance."
   }
 ];
 
