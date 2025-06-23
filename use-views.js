@@ -1,20 +1,8 @@
 const views = [
-  {
-    name: "Dashboard",
-    description: "Displays an overview of tasks, messages, and calendar events."
-  },
-  {
-    name: "Tasks",
-    description: "Manages task assignments, due dates, and status updates."
-  },
-  {
-    name: "Calendar",
-    description: "Shows scheduled meetings and events in calendar format."
-  },
-  {
-    name: "Contacts",
-    description: "Lists all team contacts and communication preferences."
-  }
+  { name: "Zones", file: "views-explanation/Zones.html" },
+  { name: "Tasks", file: "views-explanation/Zones.html" },
+  { name: "Calendar", file: "views-explanation/Zones.html" },
+  { name: "Contacts", file: "views-explanation/Zones.html" }
 ];
 
 const searchInput = document.getElementById("search");
@@ -26,16 +14,23 @@ function renderMenu(filteredViews = views) {
   filteredViews.forEach(view => {
     const btn = document.createElement("button");
     btn.textContent = view.name;
-    btn.onclick = () => showDetails(view);
+    btn.onclick = () => loadViewContent(view.file);
     viewMenu.appendChild(btn);
   });
 }
 
-function showDetails(view) {
-  viewDetails.innerHTML = `
-    <h2>${view.name}</h2>
-    <p>${view.description}</p>
-  `;
+function loadViewContent(filePath) {
+  fetch(filePath)
+    .then(res => {
+      if (!res.ok) throw new Error("View file not found.");
+      return res.text();
+    })
+    .then(html => {
+      viewDetails.innerHTML = html;
+    })
+    .catch(err => {
+      viewDetails.innerHTML = `<p style="color:red;">Failed to load content: ${err.message}</p>`;
+    });
 }
 
 searchInput.addEventListener("input", () => {
@@ -44,5 +39,4 @@ searchInput.addEventListener("input", () => {
   renderMenu(filtered);
 });
 
-// Initial render
 renderMenu();

@@ -6,9 +6,9 @@ const faqs = [
     link: "faq-login.html"
   },
   {
-    question: "Can I customize the app?",
-    answer: "See how customization works.",
-    link: "faq-customization.html"
+    question: "Can I use the app?",
+    answer: "See how to navigate the app.",
+    link: "faq-views.html"
   },
   {
     question: "Who can I contact for support?",
