@@ -1,8 +1,8 @@
 const views = [
   { name: "Zones", file: "views-explanation/zones.html" },
-  { name: "Tasks", file: "views-explanation/zones.html" },
-  { name: "Calendar", file: "views-explanation/zones.html" },
-  { name: "Contacts", file: "views-explanation/zones.html" }
+  { name: "Tasks", file: "views-explanation/Tasks.html" },
+  { name: "Calendar", file: "views-explanation/Calendar.html" },
+  { name: "Contacts", file: "views-explanation/Contacts.html" }
 ];
 
 const searchInput = document.getElementById("search");
