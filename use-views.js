@@ -1,5 +1,6 @@
 const views = [
   { name: "Zones", file: "views-explanation/zones.html" },
+  { name: "Districts", file: "views-explanation/Districts.html" },
   { name: "Tasks", file: "views-explanation/Tasks.html" },
   { name: "Calendar", file: "views-explanation/Calendar.html" },
   { name: "Contacts", file: "views-explanation/Contacts.html" }
