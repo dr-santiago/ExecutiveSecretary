@@ -14,6 +14,11 @@ const faqs = [
     question: "Who can I contact for support?",
     answer: "Support contact details here.",
     link: "faq-support.html"
+  },
+  {
+    question: "As Executive Secretary, what are the links I access regularly?",
+    answer: "Useful links found here",
+    link: "faq-useful-links.html"
   }
 ];
 
