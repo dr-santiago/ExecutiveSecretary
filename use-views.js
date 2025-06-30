@@ -2,11 +2,11 @@ const views = [
   { name: "Zones", file: "views-explanation/zones.html" },
   { name: "Districts", file: "views-explanation/Districts.html" },
   { name: "Areas", file: "views-explanation/Areas.html" },
+  { name: "Missionaries", file: "views-explanation/Missionaries.html" },
+  { name: "Phones", file: "views-explanation/Contacts.html" },
   { name: "Tasks", file: "views-explanation/Tasks.html" },
   { name: "Outgoing Flight Information", file: "views-explanation/OutgoingFlights.html" },
-  { name: "Incoming Flight Information", file: "views-explanation/IncomingFlights.html" },
-  { name: "Calendar", file: "views-explanation/Calendar.html" },
-  { name: "Contacts", file: "views-explanation/Contacts.html" }
+  { name: "Incoming Flight Information", file: "views-explanation/IncomingFlights.html" }
 ];
 
 const searchInput = document.getElementById("search");
