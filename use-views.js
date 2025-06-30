@@ -44,9 +44,12 @@ searchInput.addEventListener("input", () => {
 const toggleBtn = document.getElementById('darkModeToggle');
 const body = document.body;
 
-// Load saved mode on page load
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
+// Default to dark mode unless user explicitly chose light
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  body.classList.remove('dark-mode');
+} else {
+  body.classList.add('dark-mode'); // default to dark
 }
 
 // Toggle and persist
@@ -55,6 +58,22 @@ toggleBtn.addEventListener('click', () => {
   const newTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
   localStorage.setItem('theme', newTheme);
 });
+
+
+// const toggleBtn = document.getElementById('darkModeToggle');
+// const body = document.body;
+
+// // Load saved mode on page load
+// if (localStorage.getItem('theme') === 'dark') {
+//   body.classList.add('dark-mode');
+// }
+
+// // Toggle and persist
+// toggleBtn.addEventListener('click', () => {
+//   body.classList.toggle('dark-mode');
+//   const newTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+//   localStorage.setItem('theme', newTheme);
+// });
 
 
 renderMenu();
