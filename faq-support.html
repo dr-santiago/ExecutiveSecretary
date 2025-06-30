@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Who Do I Contact for Support?</title>
-  <link rel="stylesheet" href="style.css">
+  <script>
+    // Prevent light flash: force dark early unless 'light' is saved
+    if (localStorage.getItem('theme') !== 'light') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <nav>
       <a href="index.html">← Back to AppSheet App Documentation</a>
     </nav>
+    <button id="darkModeToggle" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">🌓</button>
+
   </header>
   <main>
     <section>
       <h1>Who Do I Contact for Support?</h1>
       <p>If you need help with the app, please reach out to the appropriate contact below:</p>
       <ul>
-        <li><strong>Technical Issues:</strong> Contact <a href="mailto:branimir.rivero@missionary.org">branimir.rivero@missionary.org</a></li>
-        <li><strong>App Feedback or Feature Requests:</strong> Contact <a href="mailto:branimir.rivero@missionary.org">branimir.rivero@missionary.org</a></li>
-        <li><strong>Account or Login Problems:</strong> Contact <a href="mailto:branimir.rivero@missionary.org">dr.santiago@missionary.org</a></li>
+        <li><strong>Technical Issues:</strong> Contact <a
+            href="mailto:branimir.rivero@missionary.org">branimir.rivero@missionary.org</a></li>
+        <li><strong>App Feedback or Feature Requests:</strong> Contact <a
+            href="mailto:branimir.rivero@missionary.org">branimir.rivero@missionary.org</a></li>
+        <li><strong>Account or Login Problems:</strong> Contact <a
+            href="mailto:branimir.rivero@missionary.org">dr.santiago@missionary.org</a></li>
       </ul>
       <p>We aim to respond within 1-2 business days.</p>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 Executive Secretary Docs</p>
+  </footer>
+  <script src="script.js"></script>
+
 </body>
+
 </html>

@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>How to Log In - FAQ</title>
-  <link rel="stylesheet" href="style.css">
+  <script>
+    // Prevent light flash: force dark early unless 'light' is saved
+    if (localStorage.getItem('theme') !== 'light') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <h1>How do I log in to the app?</h1>
     <nav>
       <a href="index.html">← Back to AppSheet App Documentation</a>
     </nav>
+    <button id="darkModeToggle" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">🌓</button>
   </header>
   <main>
     <section>
       <p>To log in, click the <strong>Login</strong> button in the center. Use your missionary E-mail.</p>
-      <img src="images/login-google.png" alt="Login Screenshot" style="max-width:100%;border:1px solid #ccc;padding:10px;">
-      <p>Open the Executive Secretary App here: <a href="https://www.appsheet.com/start/f3e3cd04-d6ba-4c93-bb4d-2229cfaf55b5" target="_blank">Go to Executive Secretary</a></p>
-      <p>Open the Packages app here: <a href="https://www.appsheet.com/start/0d35d4ab-dda1-4985-b8d9-8aa953994cb7" target="_blank">Go to Packages</a></p>
+      <img src="images/login-google.png" alt="Login Screenshot"
+        style="max-width:100%;border:1px solid #ccc;padding:10px;">
+      <p>Open the Executive Secretary App here: <a
+          href="https://www.appsheet.com/start/f3e3cd04-d6ba-4c93-bb4d-2229cfaf55b5" target="_blank">Go to Executive
+          Secretary</a></p>
+      <p>Open the Packages app here: <a href="https://www.appsheet.com/start/0d35d4ab-dda1-4985-b8d9-8aa953994cb7"
+          target="_blank">Go to Packages</a></p>
     </section>
   </main>
+  <footer>
+    <p>© 2025 Executive Secretary Docs</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Useful Links & Resources</title>
-  <link rel="stylesheet" href="style.css">
+  <script>
+    // Prevent light flash: force dark early unless 'light' is saved
+    if (localStorage.getItem('theme') !== 'light') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <h1>Useful Links & Resources</h1>
     <nav>
       <a href="index.html">← Back to AppSheet App Documentation</a>
     </nav>
+    <button id="darkModeToggle" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">🌓</button>
+
   </header>
   <main>
     <section>
@@ -20,7 +31,8 @@
           <a href="https://eticket.migracion.gob.do/" target="_blank">E-Tickets</a>
         </li>
         <li>
-          <a href="https://gvm.crm.dynamics.com/main.aspx?appid=335803de-62fe-ea11-988c-00155d59766a" target="_blank">GVM</a>
+          <a href="https://gvm.crm.dynamics.com/main.aspx?appid=335803de-62fe-ea11-988c-00155d59766a"
+            target="_blank">GVM</a>
         </li>
         <li>
           <a href="https://espinalmovil.com/pwa/" target="_blank">Espinal</a>
@@ -29,5 +41,12 @@
       </ul>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 Executive Secretary Docs</p>
+  </footer>
+  <script src="script.js"></script>
+
 </body>
+
 </html>

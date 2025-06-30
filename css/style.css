@@ -1,0 +1,175 @@
+/* Importing a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: #2563eb;
+  color: #fff;
+  padding: 1.5em 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+main {
+  max-width: 900px;
+  margin: 2em auto;
+  background: #ffffff;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+section h2 {
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  color: #6b7280;
+  margin: 3em 0 1em 0;
+  padding: 1em 0;
+  font-size: 0.9em;
+  border-top: 1px solid #e5e7eb;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#search {
+  width: 100%;
+  padding: 0.75em 1em;
+  margin-bottom: 2em;
+  font-size: 1em;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#view-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+#view-menu button {
+  padding: 0.6em 1.2em;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#view-menu button:hover {
+  background-color: #dbeafe;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ----------------------------------
+   Dark Mode (body.dark-mode wrapper)
+---------------------------------- */
+body.dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+body.dark-mode header {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.dark-mode nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fec016;
+}
+
+body.dark-mode main {
+  background: #1e293b;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode section h2 {
+  color: #fec016;
+  border-bottom-color: #374151;
+}
+
+body.dark-mode footer {
+  background: #1a1a1a;
+  color: #a0aec0;
+  border-top-color: #374151;
+}
+
+body.dark-mode #search {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+body.dark-mode #view-menu button {
+  background-color: #334155;
+  color: #fec016;
+  border-color: #475569;
+}
+
+body.dark-mode #view-menu button:hover {
+  background-color: #475569;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}

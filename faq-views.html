@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Use the App - FAQ</title>
-  <link rel="stylesheet" href="style.css">
+  <script>
+    // Prevent light flash: force dark early unless 'light' is saved
+    if (localStorage.getItem('theme') !== 'light') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <h1>Navigating the App</h1>
     <nav>
       <a href="index.html">← Back to AppSheet App Documentation</a>
     </nav>
+    <button id="darkModeToggle" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">🌓</button>
+
   </header>
 
   <main>
@@ -32,4 +43,5 @@
 
   <script src="use-views.js"></script>
 </body>
+
 </html>
