@@ -1,15 +1,29 @@
+/* Importing a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #f4f4f9;
-  color: #222;
+  background: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
 }
 
 header {
-  background: #1a73e8;
+  background: #2563eb;
   color: #fff;
-  padding: 1em 0;
+  padding: 1.5em 0;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 600;
 }
 
 nav ul {
@@ -24,34 +38,53 @@ nav ul {
 nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2em auto;
-  background: #fff;
+  background: #ffffff;
   padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 section {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+}
+
+section h2 {
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 footer {
   text-align: center;
-  color: #888;
-  margin: 2em 0 0 0;
+  color: #6b7280;
+  margin: 3em 0 1em 0;
   padding: 1em 0;
+  font-size: 0.9em;
+  border-top: 1px solid #e5e7eb;
 }
 
+/* Extra styles for search or button menus (if added later) */
 #search {
   width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
+  padding: 0.75em 1em;
+  margin-bottom: 2em;
   font-size: 1em;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
 }
 
 #view-menu {
@@ -62,13 +95,18 @@ footer {
 }
 
 #view-menu button {
-  padding: 0.5em 1em;
-  background-color: #e0e7ff;
-  border: none;
-  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 #view-menu button:hover {
-  background-color: #c7d2fe;
+  background-color: #dbeafe;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
