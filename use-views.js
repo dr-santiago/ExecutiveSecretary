@@ -41,4 +41,20 @@ searchInput.addEventListener("input", () => {
   renderMenu(filtered);
 });
 
+const toggleBtn = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Load saved mode on page load
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+}
+
+// Toggle and persist
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const newTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+  localStorage.setItem('theme', newTheme);
+});
+
+
 renderMenu();
