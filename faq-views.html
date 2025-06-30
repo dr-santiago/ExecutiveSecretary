@@ -12,6 +12,7 @@
   </script>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/views-css.css">
 </head>
 
 <body>
@@ -35,6 +36,15 @@
       <h2>Select a view to see its documentation</h2>
       <p>Use the menu or search bar above to explore how each view works and can be configured.</p>
     </section>
+
+    <!-- Properties Panel (Add this after #view-details) -->
+    <div id="properties-panel" class="properties-panel">
+      <button id="close-properties">&times;</button>
+      <div id="properties-content">
+        <!-- Dynamic content gets injected here -->
+      </div>
+    </div>
+
   </main>
 
   <footer>
@@ -43,5 +53,37 @@
 
   <script src="use-views.js"></script>
 </body>
+
+<!-- Properties Panel -->
+<div id="properties-panel" class="properties-panel">
+  <button id="close-properties">&times;</button>
+  <div id="properties-content"></div>
+</div>
+
+<script>
+  // JS
+  function showPropertiesPanel(htmlString) {
+    const content = document.getElementById("properties-content");
+    const panel = document.getElementById("properties-panel");
+
+    content.innerHTML = htmlString;
+    panel.classList.add("open");
+    document.body.classList.add("panel-open");
+  }
+
+  document.getElementById("close-properties").addEventListener("click", () => {
+    document.getElementById("properties-panel").classList.remove("open");
+    document.body.classList.remove("panel-open");
+  });
+
+  // Add click listeners to all .task-option divs
+  viewDetails.addEventListener('click', (e) => {
+    const option = e.target.closest('.task-option');
+    if (option) {
+      const descriptionHtml = option.querySelector('.task-description').innerHTML;
+      showPropertiesPanel(descriptionHtml);
+    }
+  });
+</script>
 
 </html>
