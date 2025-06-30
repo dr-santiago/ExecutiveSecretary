@@ -76,14 +76,31 @@
     document.body.classList.remove("panel-open");
   });
 
-  // Add click listeners to all .task-option divs
+  // // Add click listeners to all .task-option divs
+  // viewDetails.addEventListener('click', (e) => {
+  //   const option = e.target.closest('.task-option');
+  //   if (option) {
+  //     const descriptionHtml = option.querySelector('.task-description').innerHTML;
+  //     showPropertiesPanel(descriptionHtml);
+  //   }
+  // });
+
   viewDetails.addEventListener('click', (e) => {
     const option = e.target.closest('.task-option');
     if (option) {
-      const descriptionHtml = option.querySelector('.task-description').innerHTML;
-      showPropertiesPanel(descriptionHtml);
+      const propertiesDiv = option.querySelector('.properties');
+      if (propertiesDiv) {
+        const propertiesHtml = propertiesDiv.innerHTML;
+        showPropertiesPanel(propertiesHtml);
+      } else {
+        // fallback if .properties div missing
+        const descriptionHtml = option.querySelector('.task-description').innerHTML;
+        showPropertiesPanel(descriptionHtml);
+      }
     }
   });
+
+
 </script>
 
 </html>

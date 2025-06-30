@@ -142,3 +142,6 @@ body.dark-mode .properties-panel {
   cursor: pointer;
 }
 
+.task-option .properties {
+  display: none;
+}
