@@ -239,7 +239,7 @@ body.dark-mode .toc-link a {
 
 
 /* Divider css */
-.toc-section {
+/* .toc-section {
   margin-top: 2em;
   padding-top: 1em;
   font-size: 1.1em;
@@ -251,7 +251,7 @@ body.dark-mode .toc-link a {
 body.dark-mode .toc-section {
   color: #d1d5db;
   border-top-color: #374151;
-}
+} */
 
 
 /* scroll up button css */

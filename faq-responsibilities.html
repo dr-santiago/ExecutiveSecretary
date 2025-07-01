@@ -12,7 +12,7 @@
     </script>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/views-css.css">
+    <link rel="stylesheet" href="css/properties-tab.css">
 
 </head>
 
@@ -69,7 +69,18 @@
             <li>When someone takes their passport out of the office, they have to sign a sheet that says they did.</li>
         </ul>
 
-        <h2 class="toc-section" id="when-arrive">🛬 When Missionaries Arrive</h2>
+        <div class="task-option">
+            <h2 id="when-arrive">🛬 When Missionaries Arrive</h2>
+
+            <!-- Hidden properties div -->
+            <div class="properties" style="display:none;">
+                <h2>When Missionaries Arrive</h2>
+                <p>This panel shows detailed info about important pending tasks...</p>
+            </div>
+        </div>
+
+
+
         <ul>
             <li>Take pictures</li>
             <li>(head on, both profiles w/o earrings or glasses, hair behind ears, one happy)</li>
@@ -566,7 +577,7 @@
             to ask) because there, you will begin the document collection process.</p>
 
         <h3 id="collect-docs">To collect documents</h3>
-        <ol  class="toc-link">
+        <ol class="toc-link">
             <li>Find the list of incoming missionaries on IMOS or the Excel spreadsheet titled “Llegadas y Salidas.”
                 Every missionary needs a small, manilla envelope with their name on it in sharpie for them to put their
                 documents in. Refer to the <a href="#when-arrive">when missionaries arrive</a> section to
@@ -706,54 +717,20 @@ Gracias,
 
 
     </main>
+    <!-- Properties Panel -->
+    <div id="properties-panel" class="properties-panel">
+        <button id="close-properties">&times;</button>
+        <div id="properties-content"></div>
+    </div>
+
     <footer>
         <p>© 2025 Executive Secretary Docs</p>
     </footer>
     <script src="script.js"></script>
+    <script src="properties-tab.js"></script>
 </body>
 
-
-<!-- Properties Panel -->
-<div id="properties-panel" class="properties-panel">
-    <button id="close-properties">&times;</button>
-    <div id="properties-content"></div>
-</div>
-
 <script>
-    // JS
-    const viewDetails = document.getElementById("view-details");
-
-    function showPropertiesPanel(htmlString) {
-        const content = document.getElementById("properties-content");
-        const panel = document.getElementById("properties-panel");
-
-        content.innerHTML = htmlString;
-        panel.classList.add("open");
-        document.body.classList.add("panel-open");
-    }
-
-    document.getElementById("close-properties").addEventListener("click", () => {
-        document.getElementById("properties-panel").classList.remove("open");
-        document.body.classList.remove("panel-open");
-    });
-
-
-    viewDetails.addEventListener('click', (e) => {
-        const option = e.target.closest('.task-option');
-        if (option) {
-            const propertiesDiv = option.querySelector('.properties');
-            if (propertiesDiv) {
-                const propertiesHtml = propertiesDiv.innerHTML;
-                showPropertiesPanel(propertiesHtml);
-            } else {
-                // fallback if .properties div missing
-                const descriptionHtml = option.querySelector('.task-description').innerHTML;
-                showPropertiesPanel(descriptionHtml);
-            }
-        }
-    });
-
-
 
     // scroll up button js
     // Get the button
