@@ -210,6 +210,7 @@ body.dark-mode #view-menu button:hover {
   transition: color 0.2s ease;
 }
 
+
 .toc-list a:hover {
   text-decoration: underline;
 }
@@ -221,6 +222,18 @@ body.dark-mode #toc-search {
 }
 
 body.dark-mode .toc-list a {
+  color: #facc15; /* yellowish gold for contrast */
+}
+
+
+.toc-link a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #9333ea; /* purple, good for light + dark */
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .toc-link a {
   color: #facc15; /* yellowish gold for contrast */
 }
 
