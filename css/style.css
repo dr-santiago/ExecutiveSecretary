@@ -11,7 +11,7 @@ body {
   margin: 0;
   background: #f9fafb;
   color: #1f2937;
-  line-height: 1.9;
+  line-height: 1.4;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -195,7 +195,7 @@ body.dark-mode #view-menu button:hover {
   color: #111827;
 }
 
-.toc-list {
+.toc-list{
   list-style: none;
   padding: 0;
   margin: 0;
