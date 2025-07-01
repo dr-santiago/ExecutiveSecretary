@@ -183,3 +183,19 @@ body.dark-mode .properties-panel {
 .task-option .properties {
   display: none;
 }
+
+
+/* Divider css */
+.toc-section {
+  margin-top: 2em;
+  padding-top: 1em;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+
+body.dark-mode .toc-section {
+  color: #d1d5db;
+  border-top-color: #374151;
+}
