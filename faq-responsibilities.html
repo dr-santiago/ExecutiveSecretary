@@ -443,7 +443,7 @@
         <h3>Here is the order of a packet:</h3>
         <ol>
             <li>Tuberculosis sheet (not in a sleeve)</li>
-            <li>Biography page of Presidente y Hermana Bretón</li>
+            <li>Biography page of Presidente y Hermana Brueck</li>
             <li>Dear Returning Missionary booklet (in the backside of the first sleeve with the Biography page. These
                 will run out soon – don’t worry about ordering more.)</li>
             <li>Name and Area Sheet (special type 3 paper)</li>
@@ -503,7 +503,13 @@
 
         <h2 class="toc-section" id="upload-residencia">📄 How to upload a residencia card to GVM</h2>
         <ol>
-            <li>Open GVM.</li>
+            <li class="toc-link">
+                <a href="https://gvm.crm.dynamics.com/main.aspx?appid=335803de-62fe-ea11-988c-00155d59766a"
+                    target="_blank">
+                    Open GVM
+                </a>
+            </li>
+
             <li>Search a missionary’s name in the top search bar. Click desired missionary.</li>
             <li>Click on the tab that says Travel Documentation.</li>
             <li>Scroll down to Completed Travel Documents, and click on New Complete Travel Document.</li>
@@ -560,10 +566,10 @@
             to ask) because there, you will begin the document collection process.</p>
 
         <h3 id="collect-docs">To collect documents</h3>
-        <ol>
+        <ol  class="toc-link">
             <li>Find the list of incoming missionaries on IMOS or the Excel spreadsheet titled “Llegadas y Salidas.”
                 Every missionary needs a small, manilla envelope with their name on it in sharpie for them to put their
-                documents in. Refer to the <a href="#when-missionaries-arrive">when missionaries arrive</a> section to
+                documents in. Refer to the <a href="#when-arrive">when missionaries arrive</a> section to
                 see which items to collect.</li>
             <li>Collect all of these items from the missionaries, and then start taking their pictures. There is a
                 whiteboard on the terrace of President’s house in the back next to the wooden table, which serves as a
@@ -772,43 +778,43 @@ Gracias,
 
 
     document.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("toc-search");
-  const listItems = document.querySelectorAll("#toc-list li");
-  
-  // Search filter code (your existing)
-  input.addEventListener("input", () => {
-    const query = input.value.toLowerCase();
-    listItems.forEach((li) => {
-      const text = li.textContent.toLowerCase();
-      li.style.display = text.includes(query) ? "" : "none";
+        const input = document.getElementById("toc-search");
+        const listItems = document.querySelectorAll("#toc-list li");
+
+        // Search filter code (your existing)
+        input.addEventListener("input", () => {
+            const query = input.value.toLowerCase();
+            listItems.forEach((li) => {
+                const text = li.textContent.toLowerCase();
+                li.style.display = text.includes(query) ? "" : "none";
+            });
+        });
+
+        // New code: intercept TOC links to offset scroll
+        const tocLinks = document.querySelectorAll("#toc-list a[href^='#']");
+        const offset = 130; // Adjust this to your header height or desired offset
+
+        tocLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (!targetElement) return;
+
+                // Calculate the position to scroll to (offset from top)
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+
+                // Optionally update the URL hash without jumping
+                history.pushState(null, "", `#${targetId}`);
+            });
+        });
     });
-  });
-
-  // New code: intercept TOC links to offset scroll
-  const tocLinks = document.querySelectorAll("#toc-list a[href^='#']");
-  const offset = 130; // Adjust this to your header height or desired offset
-
-  tocLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (!targetElement) return;
-
-      // Calculate the position to scroll to (offset from top)
-      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-
-      // Optionally update the URL hash without jumping
-      history.pushState(null, "", `#${targetId}`);
-    });
-  });
-});
 
 
 </script>
